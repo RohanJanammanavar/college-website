@@ -1,5 +1,6 @@
 .contact-hero {
-    min-height: 450px;
+    min-height: calc(100vh - 66px);
+    height: calc(100vh - 66px);
 
     display: flex;
     align-items: center;
@@ -16,20 +17,30 @@
         ),
         url("../images/campus.png");
 
-    background-size: cover;
+    overflow: hidden;
+    isolation: isolate;
+}
+.contact-hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: inherit;
     background-position: center;
     background-repeat: no-repeat;
-
-    animation: heroZoom 8s ease-in-out infinite alternate;
+    background-size: cover;
+    transform: scale(1);
+    animation: heroZoom 11s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 @keyframes heroZoom{
     from{
-        background-size: 100%;
+        transform: scale(1);
     }
 
     to{
-        background-size: 105%;
+        transform: scale(1.11);
     }
 }
 
@@ -427,3 +438,12 @@
     }
 
 }
+
+/* Responsive overrides; original CSS preserved */
+.contact-hero{min-height:clamp(300px,52vh,600px);padding:30px 5%;background-size:cover}
+.contact-hero-content h1{font-size:clamp(1.9rem,4.2vw,3.25rem);line-height:1.12}.contact-hero-content p{font-size:clamp(.9rem,1.2vw,1.0625rem)}
+.contact-section{width:100%;min-width:0}.contact-left,.contact-right,.info-card,.info-content{min-width:0}.info-content p,.contact-item p{overflow-wrap:anywhere}
+@media(min-width:1500px){.contact-section{max-width:1300px;gap:clamp(50px,5vw,90px)}}
+@media(max-width:900px){.contact-section{grid-template-columns:minmax(0,1fr);gap:42px;padding:65px 6%}}
+@media(max-width:650px){.contact-hero{min-height:300px;padding:30px 5%}.contact-hero-content h1{font-size:clamp(1.8rem,8vw,2.4rem)}.contact-section{padding:45px 5%;gap:35px}.contact-left h2{font-size:clamp(1.55rem,6vw,1.9rem)}.contact-item{gap:12px;padding:12px 8px}.contact-icon{width:42px;height:42px;font-size:18px}.info-card{padding:20px 16px;gap:14px}.info-icon{width:44px;height:44px;font-size:18px}.working-hours div{flex-direction:row;align-items:flex-start;gap:12px}.working-hours p,.working-hours strong{font-size:12px;white-space:normal}}
+@media(max-width:360px){.info-card{padding:16px 12px}.contact-item h3{font-size:14px}}

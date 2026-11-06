@@ -3,7 +3,11 @@
 ================================ */
 
 .about-hero {
-    min-height: 500px;
+    position: relative;
+
+    min-height: calc(100vh - 66px);
+    height: calc(100vh - 66px);
+    max-height: none;
 
     display: flex;
     align-items: center;
@@ -18,21 +22,32 @@
         ),
         url("../images/campus.png");
 
-    background-size: cover;
-    background-position: center;
-
     color: white;
+    overflow: hidden;
+    isolation: isolate;
+}
 
-    animation: heroZoom 8s ease-in-out infinite alternate;
+.about-hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1);
+    animation: heroZoom 11s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 @keyframes heroZoom{
     from{
-        background-size: 100%;
+        transform: scale(1);
     }
 
     to{
-        background-size: 105%;
+        transform: scale(1.11);
     }
 }
 
@@ -457,3 +472,13 @@
     }
 
 }
+
+.about-hero{min-height:clamp(300px,55vh,650px);padding:35px 5%;background-size:cover}
+.about-hero-content h1{font-size:clamp(1.9rem,4.2vw,3.25rem);line-height:1.12}
+.about-hero-content p{font-size:clamp(.9rem,1.2vw,1.0625rem)}
+.about-college,.campus-section,.why-college{width:100%;min-width:0}
+.about-image,.about-content,.campus-image,.campus-content,.why-card{min-width:0}
+.about-image img,.campus-image img{display:block;width:100%;max-width:100%}
+@media(min-width:1600px){.about-college,.why-college{max-width:1500px}.campus-section{max-width:1400px}}
+@media(max-width:900px){.about-college,.campus-section{grid-template-columns:minmax(0,1fr);gap:32px}.why-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.about-image img{height:clamp(250px,48vw,430px)}.campus-image img{height:clamp(240px,42vw,380px)}.about-stats{flex-wrap:wrap}}
+@media(max-width:650px){.about-hero{min-height:300px;padding:30px 5%}.about-hero-content{padding:20px 0}.about-hero-content h1{font-size:clamp(1.8rem,8vw,2.4rem)}.about-college,.campus-section{padding:48px 5%;gap:28px}.about-content h2,.campus-content h2,.section-heading h2{font-size:clamp(1.55rem,6vw,1.9rem)}.why-college{padding:48px 5%}.why-cards{grid-template-columns:minmax(0,1fr);gap:18px}.about-stats{gap:20px}.stat h3{font-size:1.5rem}}

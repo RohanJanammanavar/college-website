@@ -3,7 +3,9 @@
 ================================= */
 
 .facilities-hero {
-    min-height: 500px;
+    min-height: calc(100vh - 66px);
+    height: calc(100vh - 66px);
+    max-height: none;
 
     display: flex;
     align-items: center;
@@ -20,20 +22,32 @@
         ),
         url("../images/campus.png");
 
-    background-size: cover;
+
+    overflow: hidden;
+    isolation: isolate;;
+}
+
+.facilities-hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: inherit;
     background-position: center;
     background-repeat: no-repeat;
-
-    animation: heroZoom 8s ease-in-out infinite alternate;
+    background-size: cover;
+    transform: scale(1);
+    animation: heroZoom 11s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 @keyframes heroZoom{
     from{
-        background-size: 100%;
+        transform: scale(1);
     }
 
     to{
-        background-size: 105%;
+        transform: scale(1.11);
     }
 }
 
@@ -344,3 +358,11 @@
     }
 
 }
+
+/* Responsive overrides; original CSS preserved */
+.facilities-hero{min-height:clamp(300px,55vh,650px);padding:30px 5%;background-size:cover}
+.facilities-hero-content h1{font-size:clamp(1.9rem,4.2vw,3.25rem);line-height:1.12}.facilities-hero-content p{font-size:clamp(.9rem,1.2vw,1.0625rem)}
+.facilities-intro,.facilities-list,.facilities-bottom{width:100%;min-width:0}.facility-card,.facility-content{min-width:0}
+@media(min-width:1500px){.facilities-list{max-width:1300px;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.facilities-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}}
+@media(max-width:650px){.facilities-hero{min-height:300px;padding:30px 5%}.facilities-hero-content h1{font-size:clamp(1.8rem,8vw,2.4rem)}.facilities-intro{padding:48px 5% 25px}.intro-content h2,.facilities-bottom h2{font-size:clamp(1.55rem,6vw,1.9rem);line-height:1.2}.facilities-list{grid-template-columns:minmax(0,1fr);padding:25px 5% 48px;gap:20px}.facility-image{height:clamp(180px,55vw,240px)}.facility-content{padding:22px}.facilities-bottom{padding:48px 5%}}

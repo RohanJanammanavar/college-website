@@ -175,3 +175,11 @@ div h2 {
         padding: 38px;
     }
 }
+
+/* Responsive overrides; original CSS preserved */
+html{min-height:100%}
+body{min-height:100vh;height:auto;padding:24px 16px}
+.login-box,.signup-box,.forgot-box{width:min(100%,350px);max-width:100%}
+.login-box h2,.signup-box h2,.forgot-box h2{overflow-wrap:anywhere}.input-box input{min-width:0}
+@media(max-width:786px){.login-box,.signup-box,.forgot-box{width:min(100%,350px);padding:clamp(22px,6vw,38px)}}
+@media(max-width:360px){body{padding:16px 10px}.login-box,.signup-box,.forgot-box{padding:22px 18px}div h2{font-size:2rem}}
