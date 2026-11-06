@@ -23,12 +23,38 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+    from{
+        background-size: 100%;
+    }
+
+    to{
+        background-size: 105%;
+    }
 }
 
 .facilities-hero-content {
     max-width: 750px;
 
     padding: 40px 20px;
+
+    animation: heroText 1s ease-out;
+}
+
+@keyframes heroText{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .facilities-hero-content span {

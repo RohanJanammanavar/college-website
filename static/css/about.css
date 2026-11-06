@@ -22,11 +22,36 @@
     background-position: center;
 
     color: white;
+
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+    from{
+        background-size: 100%;
+    }
+
+    to{
+        background-size: 105%;
+    }
 }
 
 .about-hero-content {
     max-width: 750px;
     padding: 40px 20px;
+    animation: heroText 1s ease-out;
+}
+
+@keyframes heroText{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-hero-content span {
@@ -58,16 +83,29 @@
 ================================ */
 
 .about-college {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
 
-    margin: auto;
-    padding: 90px 6%;
+    margin: 0 auto;
+    padding: 90px 5%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     gap: 70px;
     align-items: center;
+}
+
+.about-image{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.about-image.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-image img {
@@ -98,6 +136,19 @@
 
     font-size: 38px;
     line-height: 1.2;
+}
+
+.about-content{
+    opacity: 0;
+    transform: translateX(50px);
+
+    transition: opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.about-content.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-content p {
@@ -142,8 +193,10 @@
 ================================ */
 
 .why-college {
-    padding: 90px 6%;
-
+    width: 100%;
+    max-width: 1400px;
+    padding: 90px 5%;
+    margin: 0 auto;
     background: #f5f8fc;
 
     text-align: center;
@@ -194,17 +247,26 @@
     gap: 25px;
 }
 
+
 .why-card {
     padding: 35px 28px;
-
+    
     background: white;
-
+    
     border-radius: 16px;
+    opacity: 0;
 
     box-shadow:
         0 10px 30px rgba(6, 26, 49, 0.08);
 
-    transition: 0.3s;
+        transform: translateY(30px);
+        transition: opacity 1s ease, 
+        transform 1s ease;
+}
+
+.why-card.show{
+        opacity: 1;
+        transform: translateY(0);
 }
 
 .why-card:hover {
@@ -265,6 +327,19 @@
     align-items: center;
 }
 
+.campus-content{
+    opacity: 0;
+    transform: translateX(-50px);
+
+    transition: opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.campus-content.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .campus-content h2 {
     margin: 12px 0 20px;
 
@@ -280,6 +355,18 @@
 
     font-size: 15px;
     line-height: 1.8;
+}
+
+.campus-image{
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.campus-image.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .campus-image img {

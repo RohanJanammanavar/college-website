@@ -23,7 +23,7 @@ body {
     position: relative;
 
     min-height: 500px;
-
+    height: min(70vh, 700px);
     display: flex;
     align-items: center;
 
@@ -32,6 +32,18 @@ body {
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom{
+    from{
+        background-size: 100%;
+    }
+
+    to{
+        background-size: 105%;
+    }
 }
 
 .hero-overlay {
@@ -59,6 +71,20 @@ body {
     margin: auto;
 
     color: white;
+
+    animation: heroText 1s ease-out;
+}
+
+@keyframes heroText{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-small {
@@ -95,6 +121,10 @@ body {
     color: #edf4fc;
 
     margin-bottom: 27px;
+}
+
+a{
+    text-decoration: none;
 }
 
 .hero-buttons {
@@ -153,12 +183,11 @@ body {
 ========================= */
 
 .courses-section {
-    width: 88%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 
-    margin: auto;
-
-    padding: 70px 0;
+    padding: 70px 5%;
 }
 
 .section-heading {
@@ -209,8 +238,18 @@ body {
 
     overflow: hidden;
 
-    transition: 0.3s;
+    opacity: 0;
+    
+    transform: translateY(30px);
+    transition: opacity 1s ease, 
+                transform 1s ease;
 }
+
+.course-card.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .course-card:hover {
     transform: translateY(-5px);
@@ -277,6 +316,18 @@ body {
     padding: 70px 7%;
 }
 
+.about-image{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.about-image.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .about-image img {
     width: 100%;
 
@@ -285,6 +336,19 @@ body {
     object-fit: cover;
 
     border-radius: 12px;
+}
+
+.about-content{
+    opacity: 0;
+    transform: translateX(50px);
+
+    transition: opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.about-content.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-content p:not(.section-label) {
@@ -399,10 +463,28 @@ body {
 
 
 /* =========================
+   large monitors
+========================= */
+@media (max-width: 1600px){
+    .hero{
+        min-height: 600px;
+    }
+
+    .hero-content h1{
+        font-size: 58px;
+    }
+} 
+
+/* =========================
    TABLET
 ========================= */
 
 @media (max-width: 900px) {
+
+    .hero-content h1{
+        font-size: 40px;
+    }
+
     .course-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -429,37 +511,6 @@ body {
 ========================= */
 
 @media (max-width: 650px) {
-
-    .navbar {
-        height: auto;
-
-        padding: 18px 5%;
-
-        flex-wrap: wrap;
-    }
-
-    .navbar nav {
-        order: 3;
-
-        width: 100%;
-
-        justify-content: space-between;
-
-        overflow-x: auto;
-
-        gap: 20px;
-    }
-
-    .navbar nav a {
-        padding: 8px 0;
-
-        white-space: nowrap;
-    }
-
-    .navbar nav a.active::after {
-        bottom: 0;
-    }
-
     .login-btn {
         margin-left: auto;
 
@@ -469,7 +520,7 @@ body {
     }
 
     .hero {
-        min-height: 500px;
+        min-height: 400px;
     }
 
     .hero-content {
@@ -477,7 +528,7 @@ body {
     }
 
     .hero h1 {
-        font-size: 42px;
+        font-size: 30px;
     }
 
     .hero-description {
