@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Facilities | GFGC Ankalakoti Shiggaon</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/facilities.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+
+    <!-- Hero Section -->
+    <section class="facilities-hero">
+
+        <div class="facilities-hero-content">
+
+            <span>OUR CAMPUS</span>
+
+            <h1>Our Facilities</h1>
+
+            <p>
+                Explore the facilities and learning spaces available
+                to support students throughout their college journey.
+            </p>
+
+        </div>
+
+    </section>
+    
+    <section class="facilities-intro">
+
+        <div class="intro-content">
+
+            <span class="section-label">
+                SUPPORTING STUDENT LIFE
+            </span>
+
+            <h2>
+                Facilities for Learning and Growth
+            </h2>
+
+            <p>
+                Our college provides essential facilities that help
+                students learn, participate in activities and make
+                the most of their college experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Facilities Cards -->
+    <section class="facilities-list">
+
+        <div class="facility-card">
+
+            <div class="facility-image">
+                <img src="{{ url_for('static', filename='images/library.png') }}"
+                     alt="College Library">
+            </div>
+
+            <div class="facility-content">
+
+                <span class="facility-number">01</span>
+
+                <h3>Library</h3>
+
+                <p>
+                    A space where students can access books,
+                    reference materials and spend time studying
+                    and preparing for their academics.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-image">
+                <img src="{{ url_for('static', filename='images/computer-lab.png') }}"
+                     alt="Computer Lab">
+            </div>
+
+            <div class="facility-content">
+
+                <span class="facility-number">02</span>
+
+                <h3>Computer Lab</h3>
+
+                <p>
+                    The computer lab provides students with access
+                    to computers for practical learning, programming
+                    and academic activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-image">
+                <img src="{{ url_for('static', filename='images/classroom.png') }}"
+                     alt="Classroom">
+            </div>
+
+            <div class="facility-content">
+
+                <span class="facility-number">03</span>
+
+                <h3>Classrooms</h3>
+
+                <p>
+                    Our classrooms provide a comfortable environment
+                    for lectures, discussions and regular academic
+                    activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-image">
+                <img src="{{ url_for('static', filename='images/science-lab.png') }}"
+                     alt="Science Laboratory">
+            </div>
+
+            <div class="facility-content">
+
+                <span class="facility-number">04</span>
+
+                <h3>Science Laboratories</h3>
+
+                <p>
+                    Laboratory spaces provide students with
+                    opportunities for practical learning and
+                    academic activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-image">
+                <img src="{{ url_for('static', filename='images/campus.png') }}"
+                     alt="College Campus">
+            </div>
+
+            <div class="facility-content">
+
+                <span class="facility-number">05</span>
+
+                <h3>Campus Environment</h3>
+
+                <p>
+                    The campus provides students with spaces for
+                    learning, interaction and everyday college
+                    activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="facility-card">
+
+            <div class="facility-image">
+                <img src="{{ url_for('static', filename='images/sports.png') }}"
+                     alt="Sports and Activities">
+            </div>
+
+            <div class="facility-content">
+
+                <span class="facility-number">06</span>
+
+                <h3>Sports & Activities</h3>
+
+                <p>
+                    Students can take part in sports, cultural
+                    activities and other events as part of their
+                    college experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Campus CTA -->
+    <section class="facilities-bottom">
+
+        <div>
+
+            <span>
+                GFGC ANKALAKOTI SHIGGAON
+            </span>
+
+            <h2>
+                A Place to Learn, Participate and Grow
+            </h2>
+
+            <p>
+                Our campus facilities support students in their
+                academic journey and everyday college life.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

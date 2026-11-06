@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GFGC Shigagon College | Home</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+</head>
+
+<body>
+
+    <!--  NAVBAR -->
+
+    {% include 'nav.html' %}
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                LEARN · GROW · BUILD YOUR FUTURE
+            </p>
+
+            <h1>
+                Education for<br>
+                a <span>Brighter Tomorrow</span>
+            </h1>
+
+            <p class="hero-description">
+                Empowering students with quality education, modern
+                facilities and a supportive learning environment.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/admissions" class="primary-btn">
+                    Explore College →
+                </a>
+
+                <a href="#" class="secondary-btn">
+                    ◉ &nbsp; Watch Video
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--COURSES-->
+
+    <section class="courses-section">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">OUR PROGRAMS</p>
+
+                <h2>Explore Our Courses</h2>
+            </div>
+
+        </div>
+
+
+        <div class="course-grid">
+
+            <!-- Course 1 -->
+
+            <article class="course-card">
+
+                <div class="course-image computer-image"></div>
+
+                <div class="course-content">
+
+                    <h3>B.C.A</h3>
+
+                    <p>
+                        Build programming, software development and computer application skills.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Course 2 -->
+
+            <article class="course-card">
+
+                <div class="course-image mechanical-image"></div>
+
+                <div class="course-content">
+
+                    <h3>B.SC. Computer Scince</h3>
+
+                    <p>
+                        Develop scientific knowledge through practical and theoretical learning.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Course 3 -->
+
+            <article class="course-card">
+
+                <div class="course-image science-image"></div>
+
+                <div class="course-content">
+
+                    <h3>B.B.A</h3>
+
+                    <p>
+                        Develop business, management, communication and leadership skills.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <!-- Course 4 -->
+
+            <article class="course-card">
+
+                <div class="course-image science-image"></div>
+
+                <div class="course-content">
+
+                    <h3>B.COM</h3>
+
+                    <p>
+                        Learn accounting, finance, business and commerce fundamentals.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <!-- Course 5 -->
+
+            <article class="course-card">
+
+                <div class="course-image science-image"></div>
+
+                <div class="course-content">
+
+                    <h3>B.A</h3>
+
+                    <p>
+                        Explore humanities, languages, social sciences and communication.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about-section">
+
+        <div class="about-image">
+            <img
+                src="/static/images/aboutCollege.png"
+                alt="ABC College Campus"
+            >
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-label">
+                ABOUT OUR COLLEGE
+            </p>
+
+            <h2>
+                A Place to Learn, Grow
+                and Achieve
+            </h2>
+
+            <p>
+                ABC College is committed to providing quality
+                education and a supportive environment for every
+                student. We focus on academic excellence, personal
+                growth and overall development to help students
+                achieve their goals.
+            </p>
+
+
+            <div class="statistics">
+
+                <div>
+                    <strong>20+</strong>
+                    <span>Years of Excellence</span>
+                </div>
+
+                <div>
+                    <strong>5K+</strong>
+                    <span>Students</span>
+                </div>
+
+                <div>
+                    <strong>100+</strong>
+                    <span>Expert Faculty</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-section">
+
+        <p class="section-label">
+            WHY CHOOSE US
+        </p>
+
+        <h2>
+            Why Students Choose Our College
+        </h2>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon">●</div>
+
+                <div>
+                    <h3>Placement Support</h3>
+                    <p>
+                        Guidance and opportunities
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">⚙</div>
+
+                <div>
+                    <h3>Modern Facilities</h3>
+                    <p>
+                        Labs, library and sports
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">◆</div>
+
+                <div>
+                    <h3>Holistic Development</h3>
+                    <p>
+                        Academic and extracurricular
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER  -->
+
+    {% include 'footer.html' %}
+
+
+</body>
+</html>

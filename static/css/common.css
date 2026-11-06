@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #10233f;
+    background: #f5f9fd;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 6%;
+
+    background: #061a31;
+
+    color: white;
+
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.logo-icon {
+    font-size: 25px;
+    color: white;
+}
+
+.logo-icon img {
+    width: 47px;
+    height: 47px;
+    border: 1.9px solid white;
+    border-radius: 50%;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    margin-left: auto;
+}
+
+.navbar nav a {
+
+    position: relative;
+
+    color: #e8eef7;
+
+    font-size: 15px;
+
+    padding: 24px 0;
+
+    text-decoration: none;
+}
+
+.navbar nav a:hover {
+    color: #0068df;
+
+    cursor: pointer;
+
+    transform: translateY(-2px);
+}
+
+.navbar nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 13px;
+
+    height: 2px;
+
+    background: #ffffff;
+}
+
+.login-btn {
+    background: #0878f9;
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: #0068df;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 7%;
+
+    background: #061a31;
+
+    color: white;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #aebdce;
+
+    font-size: 13px;
+
+    margin: 6px;
+}
+
+footer .copyright {
+    margin-top: 20px;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 4%;
+        gap: 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        overflow-x: auto;
+
+        gap: 20px;
+    }
+
+    .navbar nav a {
+        padding: 8px 0;
+
+        white-space: nowrap;
+    }
+
+    .navbar nav a.active::after {
+        bottom: 0;
+    }
+}

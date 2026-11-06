@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="signup-box">
+        <h2>sign up</h2>
+        <div class="input-box">
+            <label>Name</label>
+            <input type="text" placeholder="Enter Username">
+        </div>
+        <div class="input-box">
+            <label>UUCMS ID</label>
+            <input type="text" placeholder="Enter Username">
+        </div>
+
+        <div class="input-box">
+            <label>Password</label>
+            <div class="password-box">
+                <input class="password" type="password" placeholder="Enter password">
+                <button type="button" class="togglePassword">👁</button>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label>Confirm password</label>
+            <div class="password-box">
+                <input class="password" type="password" placeholder="Confirm password">
+                <button type="button" class="togglePassword">👁</button>
+            </div>
+        </div>
+
+        <button class="signup-btn">sign up</button>
+        <p class="forgot">
+            <a href="{{ url_for('forgot')}}">Forgot Password</a>
+        </p>
+        
+        <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+    </div>
+</body>
+</html>

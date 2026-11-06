@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css')}}">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon"><img src="/static/images/college profile.jpg" alt=""></span>
+            <span>GFGC Ankalakoti Shigagon</span>
+        </div>
+
+        <nav>
+            <a href="{{ url_for('home')}}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a>
+            <a href="{{ url_for('about')}}" class="{% if request.endpoint == 'about' %}active{% endif %}">About</a>
+            <a href="{{ url_for('facilities')}}" class="{% if request.endpoint == 'facilities' %}active{% endif %}">Facilities</a>
+            <a href="{{ url_for('contact')}}" class="{% if request.endpoint == 'contact' %}active{% endif %}">Contact</a>
+        </nav>
+
+        <a href="{{ url_for('login')}}" class="login-btn">
+            Student Login
+        </a>
+
+    </header>
+    
+</body>
+
+</html>

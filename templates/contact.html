@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | GFGC Ankalakoti Shiggaon</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/contact.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+
+        <div class="contact-hero-content">
+
+            <span>GET IN TOUCH</span>
+
+            <h1>Contact Us</h1>
+
+            <p>
+                Stay connected with GFGC Ankalakoti Shiggaon
+                through our social and contact channels.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-left">
+
+            <span class="section-label">
+                CONNECT WITH US
+            </span>
+
+            <h2>
+                We'd Love to Hear From You
+            </h2>
+
+            <p class="contact-description">
+                Follow us and get in touch with the college
+                through the channels below.
+            </p>
+
+
+            <!-- Instagram -->
+            <a href="YOUR_INSTAGRAM_LINK"
+               target="_blank"
+               class="contact-item">
+
+                <div class="contact-icon instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div>
+                    <h3>Instagram</h3>
+                    <p>Follow us on Instagram</p>
+                </div>
+
+            </a>
+
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/YOUR_PHONE_NUMBER"
+               target="_blank"
+               class="contact-item">
+
+                <div class="contact-icon whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with us on WhatsApp</p>
+                </div>
+
+            </a>
+
+
+            <!-- LinkedIn -->
+            <a href="YOUR_LINKEDIN_LINK"
+               target="_blank"
+               class="contact-item">
+
+                <div class="contact-icon linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+
+                <div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with us on LinkedIn</p>
+                </div>
+
+            </a>
+
+
+            <!-- Email -->
+            <a href="mailto:YOUR_EMAIL@example.com"
+               class="contact-item">
+
+                <div class="contact-icon email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>YOUR_EMAIL@example.com</p>
+                </div>
+
+            </a>
+
+
+            <!-- Phone -->
+            <a href="tel:YOUR_PHONE_NUMBER"
+               class="contact-item">
+
+                <div class="contact-icon phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                    <h3>Phone</h3>
+                    <p>YOUR PHONE NUMBER</p>
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-right">
+
+            <!-- Address -->
+            <div class="info-card">
+
+                <div class="info-icon">
+                   <a href="X6X6+PG4 Gouramma B Ankalakote Govt First Grade College, Shiggaon, Shiggaon Rural, Karnataka 581205" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+                </div>
+
+                <div class="info-content">
+
+                    <span>OUR ADDRESS</span>
+
+                    <h3>
+                        GFGC Ankalakoti Shiggaon
+                    </h3>
+
+                    <p>
+                        Shiggaon, Tq : Shiggaon, Dist: Haveri
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Working Hours -->
+            <div class="info-card">
+
+                <div class="info-icon">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <div class="info-content">
+
+                    <span>WORKING HOURS</span>
+
+                    <h3>
+                        College Hours
+                    </h3>
+
+                    <div class="working-hours">
+
+                        <div>
+                            <p>Monday – Friday</p>
+                            <strong>9:00 AM – 5:00 PM</strong>
+                        </div>
+
+                        <div>
+                            <p>Saturday</p>
+                            <strong>9:00 AM – 1:00 PM</strong>
+                        </div>
+
+                        <div>
+                            <p>Sunday</p>
+                            <strong>Closed</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

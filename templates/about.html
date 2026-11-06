@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | GFGC Ankalakoti Shiggaon</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+
+    <!-- About Hero -->
+    <section class="about-hero">
+
+        <div class="about-hero-content">
+
+            <span>ABOUT OUR COLLEGE</span>
+
+            <h1>
+                Our Story
+            </h1>
+
+            <p>
+                Discover a place where education, growth and
+                opportunities come together to shape a better future.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- About College -->
+    <section class="about-college">
+
+        <div class="about-image">
+            <img src="{{ url_for('static', filename='images/aboutCollege.png') }}"
+                 alt="GFGC Ankalakoti Shiggaon College">
+        </div>
+
+        <div class="about-content">
+
+            <span class="section-label">
+                WHO WE ARE
+            </span>
+
+            <h2>
+                GFGC Ankalakoti Shiggaon
+            </h2>
+
+            <p>
+                GFGC Ankalakoti Shiggaon is committed to providing
+                students with quality education and an environment
+                that encourages learning, personal growth and
+                development.
+            </p>
+
+            <p>
+                Our college provides students with opportunities
+                to develop academic knowledge, practical skills
+                and confidence to prepare themselves for their
+                future careers.
+            </p>
+
+            <div class="about-stats">
+
+                <div class="stat">
+                    <h3>5+</h3>
+                    <p>Courses</p>
+                </div>
+
+                <div class="stat">
+                    <h3>1000+</h3>
+                    <p>Students</p>
+                </div>
+
+                <div class="stat">
+                    <h3>10+</h3>
+                    <p>Faculty</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section class="why-college">
+
+        <div class="section-heading">
+
+            <span>
+                WHY CHOOSE US
+            </span>
+
+            <h2>
+                More Than Just Education
+            </h2>
+
+            <p>
+                We focus on helping students grow academically,
+                personally and professionally.
+            </p>
+
+        </div>
+
+
+        <div class="why-cards">
+
+            <div class="why-card">
+
+                <div class="card-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Academic Growth
+                </h3>
+
+                <p>
+                    A learning environment that helps students
+                    strengthen their knowledge and academic skills.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="card-icon">
+                    👨‍🎓
+                </div>
+
+                <h3>
+                    Student Development
+                </h3>
+
+                <p>
+                    Opportunities that encourage students to build
+                    confidence, communication and practical skills.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="card-icon">
+                    🏫
+                </div>
+
+                <h3>
+                    Campus Facilities
+                </h3>
+
+                <p>
+                    A comfortable campus environment designed to
+                    support learning and student activities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Campus Section -->
+    <section class="campus-section">
+
+        <div class="campus-content">
+
+            <span class="section-label">
+                OUR CAMPUS
+            </span>
+
+            <h2>
+                A Place to Learn and Grow
+            </h2>
+
+            <p>
+                Our campus provides students with a welcoming
+                environment where they can learn, interact and
+                develop throughout their college journey.
+            </p>
+
+            <p>
+                From academics to student activities, the campus
+                provides an environment that supports both
+                education and personal development.
+            </p>
+
+        </div>
+
+
+        <div class="campus-image">
+
+            <img src="{{ url_for('static', filename='images/campus.png') }}"
+                 alt="College Campus">
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+</body>
+</html>

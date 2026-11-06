@@ -1,0 +1,320 @@
+/* =================================
+   FACILITIES HERO
+================================= */
+
+.facilities-hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(6, 26, 49, 0.78),
+            rgba(6, 26, 49, 0.78)
+        ),
+        url("../images/campus.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.facilities-hero-content {
+    max-width: 750px;
+
+    padding: 40px 20px;
+}
+
+.facilities-hero-content span {
+    color: #55aaff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.facilities-hero-content h1 {
+    margin: 15px 0;
+
+    font-size: 52px;
+    font-weight: 800;
+}
+
+.facilities-hero-content p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #e3eaf2;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   INTRO
+================================= */
+
+.facilities-intro {
+    padding: 85px 6% 50px;
+
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.section-label {
+    color: #0878f9;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.intro-content h2 {
+    margin: 12px 0 18px;
+
+    color: #061a31;
+
+    font-size: 38px;
+}
+
+.intro-content p {
+    color: #667085;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   FACILITIES LIST
+================================= */
+
+.facilities-list {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 40px 6% 90px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =================================
+   FACILITY CARD
+================================= */
+
+.facility-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(6, 26, 49, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 35px rgba(6, 26, 49, 0.13);
+}
+
+
+/* =================================
+   FACILITY IMAGE
+================================= */
+
+.facility-image {
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.facility-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.facility-card:hover .facility-image img {
+    transform: scale(1.04);
+}
+
+
+/* =================================
+   FACILITY CONTENT
+================================= */
+
+.facility-content {
+    padding: 28px;
+}
+
+.facility-number {
+    color: #0878f9;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.facility-content h3 {
+    margin: 8px 0 10px;
+
+    color: #061a31;
+
+    font-size: 22px;
+}
+
+.facility-content p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   BOTTOM SECTION
+================================= */
+
+.facilities-bottom {
+    padding: 80px 6%;
+
+    background: #f5f8fc;
+
+    text-align: center;
+}
+
+.facilities-bottom > div {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.facilities-bottom span {
+    color: #0878f9;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.facilities-bottom h2 {
+    margin: 12px 0;
+
+    color: #061a31;
+
+    font-size: 36px;
+}
+
+.facilities-bottom p {
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .facilities-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 650px) {
+
+    .facilities-hero {
+        min-height: 330px;
+    }
+
+    .facilities-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .facilities-hero-content p {
+        font-size: 14px;
+    }
+
+
+    .facilities-intro {
+        padding: 60px 6% 30px;
+    }
+
+    .intro-content h2 {
+        font-size: 30px;
+    }
+
+
+    .facilities-list {
+        padding: 30px 6% 60px;
+
+        gap: 22px;
+    }
+
+
+    .facility-image {
+        height: 210px;
+    }
+
+
+    .facility-content {
+        padding: 24px;
+    }
+
+
+    .facilities-bottom {
+        padding: 60px 6%;
+    }
+
+    .facilities-bottom h2 {
+        font-size: 29px;
+    }
+
+}

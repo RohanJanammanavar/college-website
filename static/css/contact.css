@@ -1,0 +1,403 @@
+.contact-hero {
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(6, 26, 49, 0.80),
+            rgba(6, 26, 49, 0.80)
+        ),
+        url("../images/campus.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-hero-content {
+    max-width: 750px;
+
+    padding: 40px 20px;
+}
+
+.contact-hero-content span {
+    color: #55aaff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.contact-hero-content h1 {
+    margin: 15px 0;
+
+    font-size: 52px;
+    font-weight: 800;
+}
+
+.contact-hero-content p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #e3eaf2;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+.contact-section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 90px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* =================================
+   LEFT SIDE
+================================= */
+
+.section-label {
+    color: #0878f9;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.contact-left h2 {
+    margin: 12px 0 15px;
+
+    color: #061a31;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+}
+
+.contact-description {
+    margin-bottom: 30px;
+
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   CONTACT ITEMS
+================================= */
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+
+    padding: 15px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-item:hover {
+    background: #f5f8fc;
+
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.contact-icon.instagram {
+    background: #f3e8ff;
+    color: #c13584;
+}
+
+.contact-icon.whatsapp {
+    background: #e7f9ee;
+    color: #25d366;
+}
+
+.contact-icon.linkedin {
+    background: #e8f3ff;
+    color: #0a66c2;
+}
+
+.contact-icon.email {
+    background: #eaf4ff;
+    color: #0878f9;
+}
+
+.contact-icon.phone {
+    background: #eef2ff;
+    color: #405de6;
+}
+
+.contact-item h3 {
+    margin: 0 0 4px;
+
+    color: #061a31;
+
+    font-size: 16px;
+}
+
+.contact-item p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+/* =================================
+   RIGHT SIDE
+================================= */
+
+.contact-right {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* =================================
+   INFO CARDS
+================================= */
+
+.info-card {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background: #f5f8fc;
+
+    border-radius: 18px;
+
+    border: 1px solid #e6edf5;
+}
+
+.info-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf4ff;
+
+    color: #0878f9;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.info-icon a{
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf4ff;
+
+    color: #0878f9;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    text-decoration: none;
+}
+
+.info-content > span {
+    color: #0878f9;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+.info-content h3 {
+    margin: 8px 0 8px;
+
+    color: #061a31;
+
+    font-size: 19px;
+}
+
+.info-content > p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   WORKING HOURS
+================================= */
+
+.working-hours {
+    margin-top: 15px;
+}
+
+.working-hours div {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #dfe6ee;
+}
+
+.working-hours div:last-child {
+    border-bottom: none;
+}
+
+.working-hours p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+}
+
+.working-hours strong {
+    color: #061a31;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 650px) {
+
+    .contact-hero {
+        min-height: 330px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .contact-hero-content p {
+        font-size: 14px;
+    }
+
+
+    .contact-section {
+        padding: 60px 6%;
+
+        gap: 45px;
+    }
+
+
+    .contact-left h2 {
+        font-size: 30px;
+    }
+
+
+    .info-card {
+        padding: 23px;
+
+        gap: 15px;
+    }
+
+
+    .working-hours div {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+}

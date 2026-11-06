@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forgot password</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="forgot-box">
+        <h2>Forgot password</h2>
+        <div class="input-box">
+            <label>Uucms id</label>
+            <input id="name" type="text" placeholder="Enter Username">
+        </div>
+
+        <div class="input-box">
+            <label>Enter new password</label>
+            <div class="password-box">
+                <input class="password" type="password" placeholder="New password">
+                <button type="button" class="togglePassword">👁</button>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label>Confirm password</label>
+            <div class="password-box">
+                <input class="password" type="password" placeholder="Confirm password">
+                <button type="button" class="togglePassword">👁</button>
+            </div>
+        </div>
+
+        <button class="forgot-btn">Submit</button>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/forgot.js')}}"></script>
+</body>
+</html>
